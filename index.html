@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoH Helper Mobile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+
+        .info {
+            font-size: 0.9em;
+            margin-bottom: 1em;
+        }
+
+        .info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.2em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 1.5em;
+            width: 100%;
+            padding: 0.7em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HoH Helper Mobile</h1>
+        <div class="info">
+            <p><strong>HoH Helper Mobile</strong> allows you to export your <strong>Heroes of History</strong> game data—including city layouts, heroes, equipment, leaderboards, and more—to <strong>Forge of Games</strong>. It is designed to help players gain deeper insights into their game progress and performance.</p>
+            <p>This version is specifically intended for players who primarily or exclusively play the game on mobile devices. <em>If you're using a desktop browser, we recommend our <a href="https://forgeofgames.com/help/browser-extension" target="_blank">browser extension</a> for a more streamlined experience.</em></p>
+            <p>This is a <strong>third-party tool</strong> and is <em>not affiliated with or supported by InnoGames</em>.</p>
+            <p>To function properly, the tool requires your <strong>real in-game username and password</strong>.</p>
+            <p>If you are a first-time user, please read the <a href="https://forgeofgames.com/help/hoh-helper-mobile" target="_blank">help section</a> to understand how this tool works and to review the security implications.</p>
+        </div>
+        <form onsubmit="handleLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Placeholder for logic to call game API and forward data to your server
+            console.log("Login attempt with:", username, password);
+        }
+    </script>
+</body>
+</html>
